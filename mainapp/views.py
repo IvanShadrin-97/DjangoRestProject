@@ -1,6 +1,4 @@
-from django.shortcuts import render
-
-from .models import Author, Users
+from .models import Author, User
 from .serializers import AuthorSerializer, UsersSerializer
 from rest_framework.viewsets import ModelViewSet
 
@@ -12,4 +10,4 @@ class AuthorViewSet(ModelViewSet):
 
 class UsersViewSet(ModelViewSet):
     serializer_class = UsersSerializer
-    queryset = Users.objects.all()
+    queryset = User.objects.all()

@@ -22,7 +22,7 @@ from mainapp.views import AuthorViewSet, UsersViewSet
 
 router = DefaultRouter()
 router.register('authors', AuthorViewSet)
-router.register('users', UsersViewSet)
+router.register('user', UsersViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

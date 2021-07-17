@@ -1,14 +1,14 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Author, Users
+from .models import Author, User
 
 
 class AuthorSerializer(ModelSerializer):
     class Meta:
         model = Author
-        fields = '_all_'
+        fields = '__all__'
 
 
 class UsersSerializer(ModelSerializer):
     class Meta:
-        model = Users
-        fields = '_all_'
+        model = User
+        fields = '__all__'

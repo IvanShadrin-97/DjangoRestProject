@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 class Author(models.Model):
@@ -7,8 +8,5 @@ class Author(models.Model):
     birthday_year = models.PositiveIntegerField()
 
 
-class Users(models.Model):
-    username = models.CharField(max_length=64, unique=True)
-    first_name = models.CharField(max_length=64)
-    last_name = models.CharField(max_length=64)
-    email = models.EmailField(max_length=64)
+class User(AbstractUser):
+    image = models.ImageField(blank=True)
